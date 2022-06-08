@@ -1,6 +1,6 @@
 *** Settings ***
 Library   SeleniumLibrary
-
+Test Teardown     Close All Browsers
 
 *** Variables ***
 ${LOGIN URL}      https://portal.qnet.net/
@@ -9,6 +9,8 @@ ${IRID}    HZ105891
 ${Password}  testpw
 ${eCardsNo}    TESTING1234567
 ${eCardsPin}   PRDECT
+${RetailID}    CU245925
+${RetailPass}    T@stpw120
 
 *** Test Cases ***
 WP IR Purchase
@@ -38,10 +40,19 @@ WP IR Purchase
     Wait Until Page Contains Element   id=imgLogo
     Capture Page Screenshot
     
-WP IR Purchase
+WP Retail Purchase
     Open Browser  ${LOGIN URL}  ${Browser}
     Maximize Browser Window
-    
+    Input Text    id=ctl00_ContentPlaceHolder1_txtTCO  ${RetailID}
+    Input Text    id=ctl00_ContentPlaceHolder1_txtPassword    ${RetailPass}
+    Click Button  id=ctl00_ContentPlaceHolder1_btnLogin
+    Wait Until Element Is Visible    id=ctl00_TabMenu1_lbnShopNow    
+    Click Element     //a[@id='ctl00_TabMenu1_lbnShopNow']
+    Switch Window  locator=NEW
+    Sleep     10
+    Click Element  //button[@id='btnConfirm']
+    Click Element    //a[@href='products.aspx?Category=5150000']
+    Capture Page Screenshot
 
  
     
