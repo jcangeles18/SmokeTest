@@ -52,6 +52,7 @@ WP Retail Purchase
     Sleep     10
     Click Element  //button[@id='btnConfirm']
     Click Element    //a[@href='products.aspx?Category=5150000']
+    Log     Hello workd
     Capture Page Screenshot
 
  
