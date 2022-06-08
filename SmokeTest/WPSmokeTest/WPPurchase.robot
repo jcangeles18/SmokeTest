@@ -54,6 +54,19 @@ WP Retail Purchase
     Click Element    //a[@href='products.aspx?Category=5150000']
     Log     Hello workd
     Capture Page Screenshot
+    
+WP IR Enrolment
+    Open Browser  ${LOGIN URL}  ${Browser}
+    Maximize Browser Window
+    Log     Hello workd
+    Capture Page Screenshot
+    
+WP Retail Enrolment
+    Open Browser  ${LOGIN URL}  ${Browser}
+    Maximize Browser Window
+    Log     Hello workd
+    Capture Page Screenshot
+
 
  
     
