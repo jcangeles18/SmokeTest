@@ -39,7 +39,8 @@ WP IR Purchase
     Capture Page Screenshot
     
 WP IR Purchase
-    Log    test log
+    Open Browser  ${LOGIN URL}  ${Browser}
+    Maximize Browser Window
     
 
  
