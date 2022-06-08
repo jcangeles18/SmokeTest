@@ -38,7 +38,8 @@ WP IR Purchase
     Wait Until Page Contains Element   id=imgLogo
     Capture Page Screenshot
     
-     
+WP IR Purchase
+    Log    test log
     
 
  
