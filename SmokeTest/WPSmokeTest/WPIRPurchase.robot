@@ -40,32 +40,32 @@ WP IR Purchase
     Wait Until Page Contains Element   id=imgLogo
     Capture Page Screenshot
     
-WP Retail Purchase
-    Open Browser  ${LOGIN URL}  ${Browser}
-    Maximize Browser Window
-    Input Text    id=ctl00_ContentPlaceHolder1_txtTCO  ${RetailID}
-    Input Text    id=ctl00_ContentPlaceHolder1_txtPassword    ${RetailPass}
-    Click Button  id=ctl00_ContentPlaceHolder1_btnLogin
-    Wait Until Element Is Visible    id=ctl00_TabMenu1_lbnShopNow    
-    Click Element     //a[@id='ctl00_TabMenu1_lbnShopNow']
-    Switch Window  locator=NEW
-    Sleep     10
-    Click Element  //button[@id='btnConfirm']
-    Click Element    //a[@href='products.aspx?Category=5150000']
-    Log     Hello workd
-    Capture Page Screenshot
+# WP Retail Purchase
+    # Open Browser  ${LOGIN URL}  ${Browser}
+    # Maximize Browser Window
+    # Input Text    id=ctl00_ContentPlaceHolder1_txtTCO  ${RetailID}
+    # Input Text    id=ctl00_ContentPlaceHolder1_txtPassword    ${RetailPass}
+    # Click Button  id=ctl00_ContentPlaceHolder1_btnLogin
+    # Wait Until Element Is Visible    id=ctl00_TabMenu1_lbnShopNow    
+    # Click Element     //a[@id='ctl00_TabMenu1_lbnShopNow']
+    # Switch Window  locator=NEW
+    # Sleep     10
+    # Click Element  //button[@id='btnConfirm']
+    # Click Element    //a[@href='products.aspx?Category=5150000']
+    # Log     Hello workd
+    # Capture Page Screenshot
     
-WP IR Enrolment
-    Open Browser  ${LOGIN URL}  ${Browser}
-    Maximize Browser Window
-    Log     Hello workd
-    Capture Page Screenshot
+# WP IR Enrolment
+    # Open Browser  ${LOGIN URL}  ${Browser}
+    # Maximize Browser Window
+    # Log     Hello workd
+    # Capture Page Screenshot
     
-WP Retail Enrolment
-    Open Browser  ${LOGIN URL}  ${Browser}
-    Maximize Browser Window
-    Log     Hello workd
-    Capture Page Screenshot
+# WP Retail Enrolment
+    # Open Browser  ${LOGIN URL}  ${Browser}
+    # Maximize Browser Window
+    # Log     Hello workd
+    # Capture Page Screenshot
 
 
  
